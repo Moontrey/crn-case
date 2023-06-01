@@ -556,3 +556,14 @@ def get_quantile_bins(df, col, n_bins=10, eps=1):
 
     return df, new_col
 
+
+def describe_distances(distance):
+    if distance <= 3:
+        return 'close'
+    
+    elif (distance > 3) & (distance <= 10):
+        return 'medium'
+    
+    elif distance > 10:
+        return 'far'
+
